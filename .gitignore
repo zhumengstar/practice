@@ -1,4 +1,5 @@
-.idea/
+.idea/*
 practice.iml
 src/main/webapp
+src/.DS_Store
 .DS_Store
