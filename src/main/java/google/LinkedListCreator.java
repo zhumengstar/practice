@@ -10,7 +10,7 @@ import java.util.List;
  **/
 public class LinkedListCreator {
     /**
-     * Creates a linked list
+     * Creates a linked list ตÝน้
      *
      * @param data the data to create the list
      * @return head of the linked list.The returned linked list
@@ -27,6 +27,21 @@ public class LinkedListCreator {
 
         firstNode.setNext(createLinkedList(data.subList(1, data.size())));
         return firstNode;
+    }
+
+    public Node createLargeListedList(int size) {
+        Node prev = null;
+        Node head = null;
+        for (int i = 1; i <= size; i++) {
+            Node node = new Node(i);
+            if (prev != null) {
+                prev.setNext(node);
+            } else {
+                head = node;
+            }
+            prev = node;
+        }
+        return head;
     }
 
     public static void main(String[] args) {
